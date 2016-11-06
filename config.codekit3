@@ -3548,6 +3548,14 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/images\/twitter-card.png": {
+		"ft": 32768,
+		"iS": 24415,
+		"oA": 0,
+		"oAP": "\/images\/twitter-card.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/index.html": {
 		"ft": 8192,
 		"oA": 2,
@@ -3588,6 +3596,12 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"\/README.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/README.html",
+		"oF": 0
 		},
 	"\/README.md": {
 		"cS": 0,
