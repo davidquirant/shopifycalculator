@@ -3478,6 +3478,14 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/images\/card.png": {
+		"ft": 32768,
+		"iS": 24415,
+		"oA": 0,
+		"oAP": "\/images\/card.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/images\/favicon.png": {
 		"ft": 32768,
 		"iS": 643,
@@ -3547,14 +3555,6 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
-		},
-	"\/images\/twitter-card.png": {
-		"ft": 32768,
-		"iS": 24415,
-		"oA": 0,
-		"oAP": "\/images\/twitter-card.png",
-		"oF": 0,
-		"opt": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
