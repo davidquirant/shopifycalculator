@@ -7,7 +7,7 @@
 		"uuidString": "84480D93-F8C7-40FF-8636-9137EB0A0090"
 		}
 	],
-"creatorBuild": "25390",
+"creatorBuild": "25428",
 "files": {
 	"\/.bowerrc": {
 		"ft": 8192,
@@ -3405,6 +3405,70 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/css\/app.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/app-ck.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/fonts\/BrandonText-Bold.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Bold.eot",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Bold.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Bold.ttf",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Bold.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Bold.woff",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Medium.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Medium.eot",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Medium.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Medium.ttf",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Medium.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Medium.woff",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Regular.eot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Regular.eot",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Regular.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Regular.ttf",
+		"oF": 0
+		},
+	"\/fonts\/BrandonText-Regular.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/fonts\/BrandonText-Regular.woff",
+		"oF": 0
+		},
 	"\/gulpfile.js": {
 		"ft": 64,
 		"mi": 1,
@@ -3413,6 +3477,76 @@
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
+		},
+	"\/images\/favicon.png": {
+		"ft": 32768,
+		"iS": 643,
+		"oA": 0,
+		"oAP": "\/images\/favicon.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/icon-info.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/icon-info.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/shopify-banner-300x250-dark.jpg": {
+		"ft": 16384,
+		"iS": 39561,
+		"oA": 0,
+		"oAP": "\/images\/shopify-banner-300x250-dark.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/shopify-banner-300x250-light.jpg": {
+		"ft": 16384,
+		"iS": 36078,
+		"oA": 0,
+		"oAP": "\/images\/shopify-banner-300x250-light.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/shopify-banner-728x90-dark.jpg": {
+		"ft": 16384,
+		"iS": 31084,
+		"oA": 0,
+		"oAP": "\/images\/shopify-banner-728x90-dark.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/shopify-banner-728x90-light.jpg": {
+		"ft": 16384,
+		"iS": 32923,
+		"oA": 0,
+		"oAP": "\/images\/shopify-banner-728x90-light.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/shopify_glyph.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/shopify_glyph.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/images\/tick.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/images\/tick.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -3425,6 +3559,24 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/app-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/min\/app-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/min\/app-min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/min\/gulpfile-min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/min\/min\/gulpfile-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3496,7 +3648,8 @@
 	"creationDate": 499676801,
 	"displayValue": "shopifycalculator",
 	"displayValueWasSetByUser": 0,
-	"iconImageName": "meme-ive"
+	"iconImageName": "meme-ive",
+	"lastBuiltDate": 499718219
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -3513,6 +3666,9 @@
 	"babelModuleID": "",
 	"babelNoComments": 0,
 	"babelPlugins": {
+		"async-generator-functions": {
+			"active": 0
+			},
 		"async-to-generator": {
 			"active": 0
 			},
@@ -4601,6 +4757,10 @@
 			"active": 0,
 			"optionString": "{'ignoreDestructuring': false, 'ignoreImport': false, 'ignoreExport': false}"
 			},
+		"no-useless-return": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-var": {
 			"active": 0,
 			"optionString": ""
@@ -4668,10 +4828,6 @@
 		"prefer-numeric-literals": {
 			"active": 0,
 			"optionString": ""
-			},
-		"prefer-reflect": {
-			"active": 0,
-			"optionString": "{'exceptions': []}"
 			},
 		"prefer-rest-params": {
 			"active": 0,

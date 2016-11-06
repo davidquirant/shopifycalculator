@@ -4,161 +4,273 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation for Sites</title>
+    <title>Shopify Pricing Plan Calculator</title>
+    <meta name="description" content="Choose your best Shopify plan depending on your sales">
+    <link rel=icon href="images/favicon.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-        <h1>Welcome to Foundation</h1>
+    <header class="header">
+      <div class="column row">
+        <img class="header__shopify-logo" src="images/shopify_glyph.svg" alt="Shopify">
+        <h1 class="header__title">Shopify Pricing Plan Calculator</h1>
+        <h2 class="header__subtitle">Choose your best Shopify plan depending on your sales</h2>
       </div>
-    </div>
-    
-    <div class="row">
-      <div class="large-12 columns">
-        <div class="callout">
-          <h3>We&rsquo;re stoked you want to try Foundation! </h3>
-          <p>To get going, this file (index.html) includes some basic styles you can modify, play around with, or totally destroy to get going.</p>
-          <p>Once you've exhausted the fun in this document, you should check out:</p>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/docs">Foundation Documentation</a><br />Everything you need to know about using the framework.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://zurb.com/university/code-skills">Foundation Code Skills</a><br />These online courses offer you a chance to better understand how Foundation works and how you can master it to create awesome projects.</p>
-            </div>
-            <div class="large-4 medium-4 columns">
-              <p><a href="http://foundation.zurb.com/forum">Foundation Forum</a><br />Join the Foundation community to ask a question or show off your knowlege.</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 medium-push-2 columns">
-              <p><a href="http://github.com/zurb/foundation">Foundation on Github</a><br />Latest code, issue reports, feature requests and more.</p>
-            </div>
-            <div class="large-4 medium-4 medium-pull-2 columns">
-              <p><a href="https://twitter.com/ZURBfoundation">@zurbfoundation</a><br />Ping us on Twitter if you have questions. When you build something with this we'd love to see it (and send you a totally boss sticker).</p>
-            </div>        
-          </div>
-        </div>
-      </div>
-    </div>
+    </header>
 
-    <div class="row">
-      <div class="large-8 medium-8 columns">
-        <h5>Here&rsquo;s your basic grid:</h5>
-        <!-- Grid Example -->
+    <main class="main">
+      <div class="row">
+        <div class="sales medium-12 column">
+          <h3 class="sales__title">How much will you sell monthly?</h3>
 
-        <div class="row">
-          <div class="large-12 columns">
-            <div class="primary callout">
-              <p><strong>This is a twelve column section in a row.</strong> Each of these includes a div.callout element so you can see where the columns are - it's not required at all for the grid.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-6 medium-6 columns">
-            <div class="primary callout">
-              <p>Six columns</p>
-            </div>
-          </div>
-          <div class="large-6 medium-6 columns">
-            <div class="primary callout">
-              <p>Six columns</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
-              <p>Four columns</p>
-            </div>
-          </div>
-          <div class="large-4 medium-4 small-4 columns">
-            <div class="primary callout">
-              <p>Four columns</p>
-            </div>
-          </div>
-        </div>
-        
-        <hr />
-                
-        <h5>We bet you&rsquo;ll need a form somewhere:</h5>
-        <form>
+          <div class="sales__currency"><sup class="sales__sup">$</sup><span class="sales__number">0</span></div>
+
           <div class="row">
-            <div class="large-12 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-12.columns" />
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <label>Input Label</label>
-              <input type="text" placeholder="large-4.columns" />
-            </div>
-            <div class="large-4 medium-4 columns">
-              <div class="row collapse">
-                <label>Input Label</label>
-                <div class="input-group">
-                  <input type="text" placeholder="small-9.columns" class="input-group-field" />
-                  <span class="input-group-label">.com</span>
-                </div>
+            <div class="medium-8 medium-centered large-6 column">
+              <div class="slider" data-slider data-initial-start="0" data-step="50" data-end="60000">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                <span class="slider-fill" data-slider-fill></span>
               </div>
             </div>
           </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Select Box</label>
-              <select>
-                <option value="husker">Husker</option>
-                <option value="starbuck">Starbuck</option>
-                <option value="hotdog">Hot Dog</option>
-                <option value="apollo">Apollo</option>
-              </select>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-6 medium-6 columns">
-              <label>Choose Your Favorite</label>
-              <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
-              <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
-            </div>
-            <div class="large-6 medium-6 columns">
-              <label>Check these out</label>
-              <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-              <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="large-12 columns">
-              <label>Textarea Label</label>
-              <textarea placeholder="small-12.columns"></textarea>
-            </div>
-          </div>
-        </form>
-      </div>     
 
-      <div class="large-4 medium-4 columns">
-        <h5>Try one of these buttons:</h5>
-        <p><a href="#" class="button">Simple Button</a><br/>       
-        <a href="#" class="success button">Success Btn</a><br/>
-        <a href="#" class="alert button">Alert Btn</a><br/>
-        <a href="#" class="secondary button">Secondary Btn</a></p>           
-        <div class="callout">
-          <h5>So many components, girl!</h5>
-          <p>A whole kitchen sink of goodies comes with Foundation. Check out the docs to see them all, along with details on making them your own.</p>
-          <a href="http://foundation.zurb.com/sites/docs/" class="small button">Go to Foundation Docs</a>          
+          <p class="sales__help">* Move the slider to enter estimated sales</p>
         </div>
       </div>
-    </div>
+
+      <div class="row">
+        <div class="medium-10 medium-centered column">
+          <table class="plans">
+            <thead>
+              <tr>
+                <th class="plans__header plans__header--empty"></th>
+                <th class="plans__header basic-plan basic-plan-col">
+                  <h3 class="plans__title">
+                    <span class="plans__best">Best plan</span>
+                    Basic Shopify
+                  </h3>
+                  <h4 class="plans__subtitle">All the basics for starting a new business</h4>
+                </th>
+                <th class="plans__header shopify-plan shopify-plan-col">
+                  <h3 class="plans__title">
+                    <span class="plans__best">Best plan</span>
+                    Shopify
+                  </h3>
+                  <h4 class="plans__subtitle">Everything you need for a growing business</h4>
+                </th>
+                <th class="plans__header advanced-plan advanced-plan-col">
+                  <h3 class="plans__title">
+                    <span class="plans__best">Best plan</span>
+                    Advanced Shopify
+                  </h3>
+                  <h4 class="plans__subtitle">Advanced features for scaling your business</h4>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="plans__feature-text">
+                <td class="text-left">You will pay monthly</td>
+                <td class="plans__paid basic-plan-affiliate basic-plan-col">
+                  <div>
+                    <sup class="plans__pay-sup">$</sup><span id="plan-basic-number" class="plans__pay-number">29</span>
+                  </div>
+                  <div class="plans__affiliate-button">
+                    <a href="https://www.shopify.com/?ref=clicnova" class="plans__button expanded button">Start your free trial</a>
+                    <small>Try Shopify free for 14 days, no credit card required</small>
+                  </div>
+                </td>
+                <td class="plans__paid shopify-plan-affiliate shopify-plan-col">
+                  <div>
+                    <sup class="plans__pay-sup">$</sup><span id="plan-shopify-number" class="plans__pay-number">79</span>
+                  </div>
+                  <div class="plans__affiliate-button">
+                    <a href="https://www.shopify.com/?ref=clicnova" class="plans__button expanded button">Start your free trial</a>
+                    <small>Try Shopify free for 14 days, no credit card required</small>
+                  </div>
+                </td>
+                <td class="plans__paid advanced-plan-affiliate advanced-plan-col">
+                  <div>
+                    <sup class="plans__pay-sup">$</sup><span id="plan-advanced-number" class="plans__pay-number">299</span>
+                  </div>
+                  <div class="plans__affiliate-button">
+                    <a href="https://www.shopify.com/?ref=clicnova" class="plans__button expanded button">Start your free trial</a>
+                    <small>Try Shopify free for 14 days, no credit card required</small>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="5" class="plans__feature-title">Prices</th>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Monthly price</td>
+                <td class="plans__price basic-plan-col">
+                  <sup class="plans__sup">$</sup><span class="plans__number">29</span>
+                </td>
+                <td class="plans__price shopify-plan-col">
+                  <sup class="plans__sup">$</sup><span class="plans__number">79</span>
+                </td>
+                <td class="plans__price advanced-plan-col">
+                  <sup class="plans__sup">$</sup><span class="plans__number">299</span>
+                </td>
+              </tr>
+
+              <tr>
+                <th colspan="5" class="plans__feature-title">Credit card rates</th>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Online <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Use Shopify Payments to accept credit cards through your online store. One rate for all major credit cards with no additional fees."></span></td>
+                <td class="basic-plan-col">2.9% + 30¢</td>
+                <td class="shopify-plan-col">2.6% + 30¢</td>
+                <td class="advanced-plan-col">2.4% + 30¢</td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">In person <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Process credit cards in person with Shopify POS on your mobile device. One rate for all major credit cards with no additional fees."></span></td>
+                <td class="basic-plan-col">2.7% + 0¢</td>
+                <td class="shopify-plan-col">2.5% + 0¢</td>
+                <td class="advanced-plan-col">2.4% + 0¢</td>
+              </tr>
+
+              <tr>
+                <th colspan="5" class="plans__feature-title">Transaction Fees</th>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Using Shopify Payments</td>
+                <td class="basic-plan-col">None</td>
+                <td class="shopify-plan-col">None</td>
+                <td class="advanced-plan-col">None</td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Using external payment gateways</td>
+                <td class="basic-plan-col">2.0%</td>
+                <td class="shopify-plan-col">1.0%</td>
+                <td class="advanced-plan-col">0.5%</td>
+              </tr>
+
+              <tr>
+                <th colspan="5" class="plans__feature-title">Features</th>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Staff accounts</td>
+                <td class="basic-plan-col">2</td>
+                <td class="shopify-plan-col">5</td>
+                <td class="advanced-plan-col">15</td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Number of products</td>
+                <td class="basic-plan-col">Unlimited</td>
+                <td class="shopify-plan-col">Unlimited</td>
+                <td class="advanced-plan-col">Unlimited</td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">File storage</td>
+                <td class="basic-plan-col">Unlimited</td>
+                <td class="shopify-plan-col">Unlimited</td>
+                <td class="advanced-plan-col">Unlimited</td>
+              </tr>
+
+              <tr class="plans__feature-text">
+                <td class="text-left">Shipping label discount</td>
+                <td class="basic-plan-col">Good</td>
+                <td class="shopify-plan-col">Better</td>
+                <td class="advanced-plan-col">Best</td>
+              </tr>
+
+              <tr class="plans__feature-text">
+                <td class="text-left">Retail Package</td>
+                <td class="basic-plan-col">+ $49</td>
+                <td class="shopify-plan-col">+ $49</td>
+                <td class="advanced-plan-col">+ $49</td>
+              </tr>
+
+              <tr class="plans__feature-text">
+                <td class="text-left">24/7 support</td>
+                <td class="plans__tick basic-plan-col"></td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+
+              <tr class="plans__feature-text">
+                <td class="text-left">Fraud analysis <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Use Shopify Payments and fraud analysis tools are included. If you choose an external payment gateway, upgrade to Shopify or Advanced Shopify for fraud analysis tools."></span></td>
+                <td class="plans__tick basic-plan-col"></td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+
+              <tr class="plans__feature-text">
+                <td class="text-left">Manual order creation</td>
+                <td class="plans__tick basic-plan-col"></td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Discount codes</td>
+                <td class="plans__tick basic-plan-col"></td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Website and blog</td>
+                <td class="plans__tick basic-plan-col"></td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Free SSL certificate <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Every online store includes a free SSL certificate. All traffic to your store is over HTTPS."></span></td>
+                <td class="plans__tick basic-plan-col"></td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Gift cards <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Expand your customer base and boost holiday sales with physical or digital Gift Cards."></span></td>
+                <td class="basic-plan-col">-</td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Professional reports</td>
+                <td class="basic-plan-col">-</td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Abandoned cart recovery <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Recover missed sales by automatically emailing a prefilled cart link and customized message to customers who don’t complete their purchase."></span></td>
+                <td class="basic-plan-col">-</td>
+                <td class="plans__tick shopify-plan-col"></td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Advanced report builder</td>
+                <td class="basic-plan-col">-</td>
+                <td class="shopify-plan-col">-</td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+              <tr class="plans__feature-text">
+                <td class="text-left">Real-time carrier shipping <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Save time and money by automatically calculating precise shipping rates based on your product weight, dimensions, and your customers location."></span></td>
+                <td class="basic-plan-col">-</td>
+                <td class="shopify-plan-col">-</td>
+                <td class="plans__tick advanced-plan-col"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="ads">
+        <div class="column row">
+          <div class="ads__banner">
+            <a href="https://www.shopify.com/?ref=clicnova"><img data-interchange="[images/shopify-banner-300x250-dark.jpg, small], [images/shopify-banner-728x90-dark.jpg, large]" alt="Shopify Banner"></a>
+          </div>
+          <p class="ads__contact">Are you interested in advertise here? <a href="mailto:davidquirant@gmail.com">Write me</a></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="column row">
+        <p class="footer__by">By <a href="https://twitter.com/davidquirant">@davidquirant</a></p>
+      </div>
+    </footer>
 
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>

@@ -1,12 +1,49 @@
 @charset 'utf-8';
 
+// ---------------
+// FONTS
+// ---------------
+@font-face {
+	font-family: 'Brandon Text';
+	src: url('../fonts/BrandonText-Regular.eot');
+	src: url('../fonts/BrandonText-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BrandonText-Regular.woff') format('woff'),
+		url('../fonts/BrandonText-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brandon Text';
+	src: url('../fonts/BrandonText-Medium.eot');
+	src: url('../fonts/BrandonText-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BrandonText-Medium.woff') format('woff'),
+		url('../fonts/BrandonText-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brandon Text';
+	src: url('../fonts/BrandonText-Bold.eot');
+	src: url('../fonts/BrandonText-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BrandonText-Bold.woff') format('woff'),
+		url('../fonts/BrandonText-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+// ---------------
+// IMPORTS FOUNDATION
+// ---------------
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
 @include foundation-global-styles;
 @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -44,7 +81,317 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+@include add-foundation-colors;
+
+
+// ---------------
+// MIXINS
+// ---------------
+@mixin separator {
+	background-color: $primary-color;
+  content: '';
+	display: block;
+  height: 3px;
+	margin: 10px auto;
+  width: 30px;
+
+	@include breakpoint(medium) {
+		margin: 15px auto;
+	}
+}
+
+@mixin border {
+  border: solid 1px $light-gray;
+}
+
+// ---------------
+// STYLES
+// ---------------
+.header {
+	background-color: $secondary-color;
+	padding: 20px 0;
+	text-align: center;
+
+	@include breakpoint(medium) {
+		padding: 30px 0 80px;
+	}
+
+	&__shopify-logo {
+		width: 40px;
+
+		@include breakpoint(medium) {
+			width: 55px;
+		}
+	}
+
+	&__title {
+		color: $white;
+		font-size: 1.5rem;
+		font-weight: 500;
+		margin-top: 15px;
+
+		&:after {
+			@include separator;
+		}
+
+		@include breakpoint(medium) {
+			font-size: 2.5rem;
+			margin-top: 20px;
+		}
+	}
+
+	&__subtitle {
+		color: $white;
+		font-size: 1.15rem;
+		font-weight: normal;
+
+		@include breakpoint(medium) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.sales {
+	background-color: $white;
+	border-top: solid 5px $primary-color;
+	padding-top: 25px;
+	text-align: center;
+
+	@include breakpoint(medium) {
+		margin-top: -50px;
+		padding-top: 40px;
+	}
+
+	&__title {
+		font-size: 1.15rem;
+		font-weight: 500;
+
+		@include breakpoint(medium) {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__sup {
+		display: inline-block;
+		font-size: 0.725rem;
+		font-weight: bold;
+		margin-top: 19px;
+		vertical-align: top;
+
+		@include breakpoint(medium) {
+			margin-top: 24px;
+		}
+	}
+
+	&__number {
+		font-size: 2em;
+		font-weight: bold;
+
+		@include breakpoint(medium) {
+			font-size: 2.5em;
+		}
+	}
+
+	&__help {
+		font-size: .8rem;
+	  color: $dark-gray;
+	}
+}
+
+.plans {
+	margin-top: 30px;
+	text-align: center;
+
+	td, th {
+		@include border;
+		z-index: 1;
+	}
+
+	&__header {
+		padding: 20px;
+		width: 60%;
+
+		@include breakpoint(medium) {
+			width: 20%;
+		}
+
+		&--empty {
+			width: 40%;
+
+			@include breakpoint(medium) {
+				width: 25%;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 1.125rem;
+		font-weight: 500;
+		text-align: center;
+		position: relative;
+	}
+
+	&__subtitle {
+		color: $dark-gray;
+		font-size: .875rem;
+		font-weight: normal;
+		line-height: 1.2rem;
+		margin: 0;
+		text-align: center;
+	}
+
+	&__best {
+		color: $white;
+		background-color: $primary-color;
+		display: block;
+		position: absolute;
+		top: -37px;
+		width: 100%;
+		padding: 5px 0;
+		text-transform: uppercase;
+		font-size: 0.8125em;
+		font-weight: bold;
+		line-height: 1.38;
+		letter-spacing: 0.2em;
+	}
+
+	&__affiliate-button {
+		display: none;
+	}
+
+	&__button {
+		margin: 10px 0;
+	}
+
+	&__feature-title {
+		background-color: #f8f8f8;
+		font-size: 0.8125em;
+		font-weight: bold;
+		line-height: 1.38;
+		letter-spacing: 0.2em;
+		padding: 10px 15px;
+		text-transform: uppercase;
+		text-align: left;
+	}
+
+	&__feature-text {
+		color: $dark-gray;
+		font-family: Helvetica, "Brandon Text";
+		font-size: .875rem;
+
+		td {
+			padding: 15px;
+		}
+	}
+
+	&__paid {
+		vertical-align: top;
+	}
+
+	&__pay-sup {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 24px;
+		font-family: "Brandon Text", Helvetica;
+		font-size: 0.725rem;
+		font-weight: bold;
+		color: $secondary-color;
+	}
+
+	&__pay-number {
+		font-family: "Brandon Text", Helvetica;
+		font-size: 2rem;
+		font-weight: bold;
+		color: $secondary-color;
+
+		@include breakpoint(medium) {
+			font-size: 2.5rem;
+		}
+	}
+
+	&__sup {
+		color: $secondary-color;
+		display: inline-block;
+		font-family: "Brandon Text", Helvetica;
+		font-size: 0.725rem;
+		font-weight: bold;
+		margin-top: 18px;
+		vertical-align: top;
+	}
+
+	&__number {
+		color: $secondary-color;
+		font-family: "Brandon Text", Helvetica;
+		font-size: 1.75rem;
+		font-weight: bold;
+
+	}
+
+	&__tick {
+		background-image: url(../images/tick.svg);
+		background-size: 18px 18px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.ads {
+	&:before {
+		@include separator;
+	}
+
+	&__banner {
+		margin: 20px auto 20px;
+		width: 300px;
+		height: 250px;
+
+		@include breakpoint(large) {
+			width: 728px;
+			height: 90px;
+		}
+	}
+
+	&__contact {
+		color: $dark-gray;
+		font-size: .85rem;
+		text-align: center;
+		margin-bottom: 5px;
+
+		@include breakpoint(large) {
+			font-size: 1rem;
+		}
+	}
+}
+
+.footer {
+	&:before {
+		@include separator;
+	}
+
+	&__by {
+		text-align: center;
+		color: $dark-gray;
+		font-size: .85rem;
+		padding: 5px 0 30px;
+	}
+}
+
+// ---------------
+// OVERRIDE FUNDATION
+// ---------------
+.slider {
+	margin-bottom: 1.5rem;
+}
+
+.button-group {
+	margin-top: 15px;
+}
+
+.button.hollow {
+    border: 1px solid $light-gray;
+    color: $secondary-color;
+}
