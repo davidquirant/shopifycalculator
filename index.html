@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopify Pricing Plan Calculator</title>
+    <title>Shopify Plan Calculator</title>
     <meta name="description" content="Choose the best Shopify Plan for your store depending on your sales">
     <link rel=icon href="images/favicon.png" sizes="32x32" type="image/png">
     <link rel="stylesheet" href="css/app.css">
@@ -12,268 +12,207 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:creator" content="@davidquirant">
-    <meta name="twitter:title" content="Shopify Pricing Plan Calculator">
+    <meta name="twitter:title" content="Shopify Plan Calculator">
     <meta name="twitter:description" content="Choose the best Shopify Plan for your store depending on your sales">
     <meta name="twitter:image" content="http://www.davidquirant.com/shopifycalculator/images/card.png">
 
     <!-- Facebook Open Graph-->
-    <meta property="og:title" content="Shopify Pricing Plan Calculator" />
+    <meta property="og:title" content="Shopify Plan Calculator" />
     <meta property="og:description" content="Choose the best Shopify Plan for your store depending on your sales" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://www.davidquirant.com/shopifycalculator/" />
     <meta property="og:image" content="http://www.davidquirant.com/shopifycalculator/images/card.png" />
   </head>
   <body>
+
     <header class="header">
       <div class="column row">
-        <img class="header__shopify-logo" src="images/shopify_glyph.svg" alt="Shopify">
-        <h1 class="header__title">Shopify Pricing Plan Calculator</h1>
+        <h1 class="header__title">Shopify Plan Calculator</h1>
         <h2 class="header__subtitle">Choose the best Shopify Plan for your store depending on your sales</h2>
       </div>
     </header>
 
     <main class="main">
-      <div class="row">
-        <div class="sales medium-12 column">
-          <h3 class="sales__title">How much will you sell monthly?</h3>
-
-          <div class="sales__currency"><sup class="sales__sup">$</sup><span class="sales__number">0</span></div>
-
-          <div class="row">
-            <div class="medium-8 medium-centered large-6 column">
-              <div class="slider" data-slider data-initial-start="0" data-step="50" data-end="60000">
-                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
-                <span class="slider-fill" data-slider-fill></span>
-              </div>
-            </div>
+      <div class="payments">
+        <div class="column row">
+          <h3 class="payments__title">Payment</h3>
+          <div class="stacked-for-small button-group">
+            <a id="payments-shopify" class="payments--active button">Shopify Payments</a>
+            <a id="payments-external" class="hollow button">External Payment Gateways</a>
           </div>
-
-          <p class="sales__help">* Move the slider to enter estimated sales</p>
         </div>
       </div>
 
-      <div class="row">
-        <div class="medium-10 medium-centered column">
-          <table class="plans">
-            <thead>
-              <tr>
-                <th class="plans__header plans__header--empty"></th>
-                <th class="plans__header basic-plan basic-plan-col">
-                  <h3 class="plans__title">
-                    <span class="plans__best">Best plan</span>
-                    Basic Shopify
-                  </h3>
-                  <h4 class="plans__subtitle">All the basics for starting a new business</h4>
-                </th>
-                <th class="plans__header shopify-plan shopify-plan-col">
-                  <h3 class="plans__title">
-                    <span class="plans__best">Best plan</span>
-                    Shopify
-                  </h3>
-                  <h4 class="plans__subtitle">Everything you need for a growing business</h4>
-                </th>
-                <th class="plans__header advanced-plan advanced-plan-col">
-                  <h3 class="plans__title">
-                    <span class="plans__best">Best plan</span>
-                    Advanced Shopify
-                  </h3>
-                  <h4 class="plans__subtitle">Advanced features for scaling your business</h4>
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="plans__feature-text">
-                <td class="text-left">You will pay monthly</td>
-                <td class="plans__paid basic-plan-affiliate basic-plan-col">
-                  <div>
-                    <sup class="plans__pay-sup">$</sup><span id="plan-basic-number" class="plans__pay-number">29</span>
-                  </div>
-                  <div class="plans__affiliate-button">
-                    <a href="https://www.shopify.com/?ref=clicnova" class="plans__button expanded button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Basic Shopify');">Start your free trial</a>
-                    <small>Try Shopify free for 14 days, no credit card required</small>
-                  </div>
-                </td>
-                <td class="plans__paid shopify-plan-affiliate shopify-plan-col">
-                  <div>
-                    <sup class="plans__pay-sup">$</sup><span id="plan-shopify-number" class="plans__pay-number">79</span>
-                  </div>
-                  <div class="plans__affiliate-button">
-                    <a href="https://www.shopify.com/?ref=clicnova" class="plans__button expanded button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Shopify');">Start your free trial</a>
-                    <small>Try Shopify free for 14 days, no credit card required</small>
-                  </div>
-                </td>
-                <td class="plans__paid advanced-plan-affiliate advanced-plan-col">
-                  <div>
-                    <sup class="plans__pay-sup">$</sup><span id="plan-advanced-number" class="plans__pay-number">299</span>
-                  </div>
-                  <div class="plans__affiliate-button">
-                    <a href="https://www.shopify.com/?ref=clicnova" class="plans__button expanded button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Advanced Shopify');">Start your free trial</a>
-                    <small>Try Shopify free for 14 days, no credit card required</small>
-                  </div>
-                </td>
-              </tr>
+      <div class="sliders">
+        <div id="sliders-shopify">
+          <div class="row">
+            <div class="small-12 medium-4 column">
+              <h4 class="sliders__title">Average Order</h4>
+              <div class="sliders__value"><sup>$</sup><span id="slider-average-number">0</span></div>
+              <div id="slider-average" class="slider" data-slider data-initial-start="0" data-step="5" data-end="500">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                <span class="slider-fill" data-slider-fill></span>
+                <input type="hidden">
+              </div>
+            </div>
+            <div class="small-12 medium-4 column">
+              <h4 class="sliders__title">Orders Online Monthly</h4>
+              <div class="sliders__value"><span id="slider-online-number">0</span></div>
+              <div id="slider-online" class="slider" data-slider data-initial-start="0" data-step="5" data-end="5000">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                <span class="slider-fill" data-slider-fill></span>
+                <input type="hidden">
+              </div>
+            </div>
+            <div class="small-12 medium-4 column">
+              <h4 class="sliders__title">Orders in Person Monthly</h4>
+              <div class="sliders__value"><span id="slider-person-number">0</span></div>
+              <div id="slider-person" class="slider" data-slider data-initial-start="0" data-step="5" data-end="5000">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                <span class="slider-fill" data-slider-fill></span>
+                <input type="hidden">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="sliders-external">
+          <div class="row">
+            <div class="small-12 medium-6 medium-centered column">
+              <h4 class="sliders__title">Total Sales Monthly</h4>
+              <div class="sliders__value"><sup>$</sup><span id="slider-sales-number">0</span></div>
+              <div id="slider-sales" class="slider" data-slider data-initial-start="0" data-step="50" data-end="100000">
+                <span class="slider-handle"  data-slider-handle role="slider" tabindex="1"></span>
+                <span class="slider-fill" data-slider-fill></span>
+                <input type="hidden">
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="sliders__help">* Move slider to enter values</p>
+      </div>
 
-              <tr>
-                <th colspan="5" class="plans__feature-title">Prices</th>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Monthly price</td>
-                <td class="plans__price basic-plan-col">
-                  <sup class="plans__sup">$</sup><span class="plans__number">29</span>
-                </td>
-                <td class="plans__price shopify-plan-col">
-                  <sup class="plans__sup">$</sup><span class="plans__number">79</span>
-                </td>
-                <td class="plans__price advanced-plan-col">
-                  <sup class="plans__sup">$</sup><span class="plans__number">299</span>
-                </td>
-              </tr>
+      <div class="pay-plan">
+        <div class="column row">
+          <h3 class="pay-plan__title">Plans</h3>
+          <div class="stacked-for-small button-group">
+            <a id="button-monthly" class="pay-plan--active button">Monthly</a>
+            <a id="button-annual" class="hollow button">Annual (10% discount)</a>
+            <a id="button-biennial" class="hollow button">Biennial (20% discount)</a>
+          </div>
+          <fieldset>
+            <input id="retail" type="checkbox"><label for="retail">Retail Package (+ $49/monthly)</label>
+          </fieldset>
+        </div>
+      </div>
 
-              <tr>
-                <th colspan="5" class="plans__feature-title">Credit card rates</th>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Online <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Use Shopify Payments to accept credit cards through your online store. One rate for all major credit cards with no additional fees."></span></td>
-                <td class="basic-plan-col">2.9% + 30¢</td>
-                <td class="shopify-plan-col">2.6% + 30¢</td>
-                <td class="advanced-plan-col">2.4% + 30¢</td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">In person <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Process credit cards in person with Shopify POS on your mobile device. One rate for all major credit cards with no additional fees."></span></td>
-                <td class="basic-plan-col">2.7% + 0¢</td>
-                <td class="shopify-plan-col">2.5% + 0¢</td>
-                <td class="advanced-plan-col">2.4% + 0¢</td>
-              </tr>
+      <div class="plans">
+        <div class="row" data-equalizer data-equalize-on="medium">
+          <div class="small-12 medium-6 large-3 column">
+            <div id="plan-basic" class="plan" data-equalizer-watch>
+              <div class="plan__header">
+                <h4 class="plan__title">Basic Shopify</h4>
+              </div>
+              <div class="plan__content">
+                <div class="plan__ribbon"></div>
+                <h5 class="plan__subtitle">You Pay</h5>
+                <div class="plan__pay"><sup>$</sup><span class="plan__pay-basic">29</span></div>
+                <a href="https://www.shopify.com/?ref=clicnova" class="disabled button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Basic Shopify');">Start your free trial</a>
+                <hr class="plan__separator">
+                <h5 class="plan__subtitle">Monthly Price</h5>
+                <div class="plan__cost"><sup>$</sup>29</div>
+                <h5 class="plan__subtitle">Credit Card Rates</h5>
+                <div class="plan__credit-basic">
+                  <p>Online<br>2.9% + 30¢</p>
+                  <p>In person<br>2.7% + 0¢</p>
+                </div>
+                <h5 class="plan__subtitle">Transactions Fees</h5>
+                <div class="plan__fees-basic plan-basic">
+                  <p>None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-6 large-3 column">
+            <div id="plan-shopify" class="plan" data-equalizer-watch>
+              <div class="plan__header">
+                <h4 class="plan__title">Shopify</h4>
+              </div>
+              <div class="plan__content">
+                <div class="plan__ribbon"></div>
+                <h5 class="plan__subtitle">You Pay</h5>
+                <div class="plan__pay"><sup>$</sup><span class="plan__pay-shopify">79</span></div>
+                <a href="https://www.shopify.com/?ref=clicnova" class="disabled button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Shopify');">Start your free trial</a>
+                <hr class="plan__separator">
+                <h5 class="plan__subtitle">Monthly Price</h5>
+                <div class="plan__cost"><sup>$</sup>79</div>
+                <h5 class="plan__subtitle">Credit Card Rates</h5>
+                <div class="plan__credit-shopify">
+                  <p>Online<br>2.6% + 30¢</p>
+                  <p>In person<br>2.5% + 0¢</p>
+                </div>
+                <h5 class="plan__subtitle">Transactions Fees</h5>
+                <div class="plan__fees-shopify">
+                  <p>None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-6 large-3 column">
+            <div id="plan-advanced" class="plan" data-equalizer-watch>
+              <div class="plan__header">
+                <h4 class="plan__title">Advanced Shopify</h4>
+              </div>
+              <div class="plan__content">
+                <div class="plan__ribbon"></div>
+                <h5 class="plan__subtitle">You Pay</h5>
+                <div class="plan__pay"><sup>$</sup><span class="plan__pay-advanced">299</span></div>
+                <a href="https://www.shopify.com/?ref=clicnova" class="disabled button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Advanced Shopify');">Start your free trial</a>
+                <hr class="plan__separator">
+                <h5 class="plan__subtitle">Monthly Price</h5>
+                <div class="plan__cost"><sup>$</sup>299</div>
+                <h5 class="plan__subtitle">Credit Card Rates</h5>
+                <div class="plan__credit-advanced">
+                  <p>Online<br>2.4% + 30¢</p>
+                  <p>In person<br>2.4% + 0¢</p>
+                </div>
+                <h5 class="plan__subtitle">Transactions Fees</h5>
+                <div class="plan__fees-advanced">
+                  <p>None</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="small-12 medium-6 large-3 column">
+            <div id="plan-plus" class="plan" data-equalizer-watch>
+              <div class="plan__header">
+                <h4 class="plan__title">Shopify Plus</h4>
+              </div>
+              <div class="plan__content">
+                <div class="plan__ribbon"></div>
+                <h5 class="plan__subtitle">You Pay</h5>
+                <div class="plan__pay"><sup>$</sup><span class="plan__pay-plus">2.000</span></div>
+                <a href="https://www.shopify.com/?ref=clicnova" class="disabled button" onclick="ga('send', 'event', 'Botón Plan', 'Clic', 'Shopify Plus');">Start your free trial</a>
+                <hr class="plan__separator">
+                <h5 class="plan__subtitle">Monthly Price</h5>
+                <div class="plan__cost"><sup>$</sup>2.000</div>
+                <h5 class="plan__subtitle">Credit Card Rates</h5>
+                <p>Custom</p>
+                <h5 class="plan__subtitle">Transactions Fees</h5>
+                <p>None</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-              <tr>
-                <th colspan="5" class="plans__feature-title">Transaction Fees</th>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Using Shopify Payments</td>
-                <td class="basic-plan-col">None</td>
-                <td class="shopify-plan-col">None</td>
-                <td class="advanced-plan-col">None</td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Using external payment gateways</td>
-                <td class="basic-plan-col">2.0%</td>
-                <td class="shopify-plan-col">1.0%</td>
-                <td class="advanced-plan-col">0.5%</td>
-              </tr>
-
-              <tr>
-                <th colspan="5" class="plans__feature-title">Features</th>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Staff accounts</td>
-                <td class="basic-plan-col">2</td>
-                <td class="shopify-plan-col">5</td>
-                <td class="advanced-plan-col">15</td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Number of products</td>
-                <td class="basic-plan-col">Unlimited</td>
-                <td class="shopify-plan-col">Unlimited</td>
-                <td class="advanced-plan-col">Unlimited</td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">File storage</td>
-                <td class="basic-plan-col">Unlimited</td>
-                <td class="shopify-plan-col">Unlimited</td>
-                <td class="advanced-plan-col">Unlimited</td>
-              </tr>
-
-              <tr class="plans__feature-text">
-                <td class="text-left">Shipping label discount</td>
-                <td class="basic-plan-col">Good</td>
-                <td class="shopify-plan-col">Better</td>
-                <td class="advanced-plan-col">Best</td>
-              </tr>
-
-              <tr class="plans__feature-text">
-                <td class="text-left">Retail Package</td>
-                <td class="basic-plan-col">+ $49</td>
-                <td class="shopify-plan-col">+ $49</td>
-                <td class="advanced-plan-col">+ $49</td>
-              </tr>
-
-              <tr class="plans__feature-text">
-                <td class="text-left">24/7 support</td>
-                <td class="plans__tick basic-plan-col"></td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-
-              <tr class="plans__feature-text">
-                <td class="text-left">Fraud analysis <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Use Shopify Payments and fraud analysis tools are included. If you choose an external payment gateway, upgrade to Shopify or Advanced Shopify for fraud analysis tools."></span></td>
-                <td class="plans__tick basic-plan-col"></td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-
-              <tr class="plans__feature-text">
-                <td class="text-left">Manual order creation</td>
-                <td class="plans__tick basic-plan-col"></td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Discount codes</td>
-                <td class="plans__tick basic-plan-col"></td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Website and blog</td>
-                <td class="plans__tick basic-plan-col"></td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Free SSL certificate <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Every online store includes a free SSL certificate. All traffic to your store is over HTTPS."></span></td>
-                <td class="plans__tick basic-plan-col"></td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Gift cards <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Expand your customer base and boost holiday sales with physical or digital Gift Cards."></span></td>
-                <td class="basic-plan-col">-</td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Professional reports</td>
-                <td class="basic-plan-col">-</td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Abandoned cart recovery <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Recover missed sales by automatically emailing a prefilled cart link and customized message to customers who don’t complete their purchase."></span></td>
-                <td class="basic-plan-col">-</td>
-                <td class="plans__tick shopify-plan-col"></td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Advanced report builder</td>
-                <td class="basic-plan-col">-</td>
-                <td class="shopify-plan-col">-</td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-              <tr class="plans__feature-text">
-                <td class="text-left">Real-time carrier shipping <span data-tooltip aria-haspopup="true" class="plans-tooltip-icon has-tip right" data-disable-hover="false" tabindex="1" title="Save time and money by automatically calculating precise shipping rates based on your product weight, dimensions, and your customers location."></span></td>
-                <td class="basic-plan-col">-</td>
-                <td class="shopify-plan-col">-</td>
-                <td class="plans__tick advanced-plan-col"></td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="plans__info column row">
+          * This calculate only is orientative. Please, check it with Shopify pricing page.
         </div>
       </div>
 
       <div class="ads">
         <div class="column row">
           <div class="ads__banner">
-            <a href="https://www.shopify.com/?ref=clicnova" onclick="ga('send', 'event', 'Publicidad', 'Clic', 'Banner Footer');"><img data-interchange="[images/shopify-banner-300x250-dark.jpg, small], [images/shopify-banner-728x90-dark.jpg, large]" alt="Shopify Banner"></a>
+            <a href="https://www.shopify.com/?ref=clicnova" onclick="ga('send', 'event', 'Publicidad', 'Clic', 'Banner Footer');"><img data-interchange="[images/shopify-banner-300x250-dark.jpg, small], [images/shopify-banner-728x90-dark.jpg, medium]" alt="Shopify Banner"></a>
           </div>
           <p class="ads__contact">Are you interested in advertise here? <a href="mailto:davidquirant@gmail.com" onclick="ga('send', 'event', 'Contacto Publicidad', 'Clic');">Write me</a></p>
         </div>
@@ -282,13 +221,13 @@
 
     <footer class="footer">
       <div class="column row">
-        <p class="footer__by">By <a href="https://twitter.com/davidquirant" onclick="ga('send', 'event', 'Perfil Twitter', 'Clic');">@davidquirant</a></p>
+        <div class="footer__by">By <a href="https://twitter.com/davidquirant" onclick="ga('send', 'event', 'Perfil Twitter', 'Clic');">@davidquirant</a>, a Shopify Partner. This is an unofficial Shopify site.</div>
       </div>
     </footer>
 
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/what-input/what-input.js"></script>
-    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/what-input/what-input.min.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.min.js"></script>
     <script src="js/app.js"></script>
 
     <script>

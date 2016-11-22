@@ -3478,51 +3478,13 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/images\/best-choice.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/best-choice.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/images\/card.png": {
 		"ft": 32768,
 		"iS": 30957,
 		"oA": 0,
 		"oAP": "\/images\/card.png",
 		"oF": 0,
-		"opt": 1
-		},
-	"\/images\/facebook.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/facebook.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/favicon.png": {
-		"ft": 32768,
-		"iS": 957,
-		"oA": 0,
-		"oAP": "\/images\/favicon.png",
-		"oF": 0,
-		"opt": 1
-		},
-	"\/images\/google-plus.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/google-plus.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
+		"opt": 0
 		},
 	"\/images\/linkedin.svg": {
 		"ft": 2097152,
@@ -3565,36 +3527,6 @@
 		"oAP": "\/images\/shopify-banner-728x90-light.jpg",
 		"oF": 0,
 		"opt": 0
-		},
-	"\/images\/shopify-partner.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/shopify-partner.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/shopify_logo_darkbg.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/shopify_logo_darkbg.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
-	"\/images\/twitter.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/images\/twitter.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -3694,7 +3626,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 500327394,
-	"displayValue": "shopifycalculator",
+	"displayValue": "shopifycalculator_v2",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-soon",
 	"lastBuiltDate": 500327510

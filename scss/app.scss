@@ -3,35 +3,7 @@
 // ---------------
 // FONTS
 // ---------------
-@font-face {
-	font-family: 'Brandon Text';
-	src: url('../fonts/BrandonText-Regular.eot');
-	src: url('../fonts/BrandonText-Regular.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/BrandonText-Regular.woff') format('woff'),
-		url('../fonts/BrandonText-Regular.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Brandon Text';
-	src: url('../fonts/BrandonText-Medium.eot');
-	src: url('../fonts/BrandonText-Medium.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/BrandonText-Medium.woff') format('woff'),
-		url('../fonts/BrandonText-Medium.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Brandon Text';
-	src: url('../fonts/BrandonText-Bold.eot');
-	src: url('../fonts/BrandonText-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/BrandonText-Bold.woff') format('woff'),
-		url('../fonts/BrandonText-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,800');
 
 
 // ---------------
@@ -39,52 +11,52 @@
 // ---------------
 @import 'settings';
 @import 'foundation';
-@import 'motion-ui';
+// @import 'motion-ui';
 
 @include foundation-global-styles;
 @include foundation-grid;
-@include foundation-flex-grid;
+// @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
 // @include foundation-range-input;
-@include foundation-accordion;
-@include foundation-accordion-menu;
-@include foundation-badge;
-@include foundation-breadcrumbs;
+// @include foundation-accordion;
+// @include foundation-accordion-menu;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
 @include foundation-button-group;
-@include foundation-callout;
-@include foundation-close-button;
+// @include foundation-callout;
+// @include foundation-close-button;
 @include foundation-menu;
-@include foundation-menu-icon;
-@include foundation-drilldown-menu;
-@include foundation-dropdown;
-@include foundation-dropdown-menu;
-@include foundation-flex-video;
-@include foundation-label;
-@include foundation-media-object;
-@include foundation-off-canvas;
-@include foundation-orbit;
-@include foundation-pagination;
-@include foundation-progress-bar;
+// @include foundation-menu-icon;
+// @include foundation-drilldown-menu;
+// @include foundation-dropdown;
+// @include foundation-dropdown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
 // @include foundation-progress-element;
 // @include foundation-meter-element;
 @include foundation-slider;
-@include foundation-sticky;
-@include foundation-reveal;
-@include foundation-switch;
-@include foundation-table;
-@include foundation-tabs;
-@include foundation-thumbnail;
-@include foundation-title-bar;
-@include foundation-tooltip;
-@include foundation-top-bar;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-title-bar;
+// @include foundation-tooltip;
+// @include foundation-top-bar;
 @include foundation-visibility-classes;
-@include foundation-float-classes;
-@include foundation-flex-classes;
+// @include foundation-float-classes;
+// @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+// @include motion-ui-transitions;
+// @include motion-ui-animations;
 @include add-foundation-colors;
 
 
@@ -104,252 +76,262 @@
 	}
 }
 
-@mixin border {
-  border: solid 1px $light-gray;
+@mixin sup ($font-size, $margin-top) {
+	display: inline-block;
+	font-size: $font-size;
+	font-weight: bold;
+	margin-top: $margin-top;
+	vertical-align: top;
 }
+
 
 // ---------------
 // STYLES
 // ---------------
 .header {
-	background-color: $secondary-color;
-	padding: 20px 0;
+	background-color: $primary-color;
+	padding: 30px 0;
 	text-align: center;
 
-	@include breakpoint(medium) {
-		padding: 30px 0 80px;
-	}
-
-	&__shopify-logo {
-		width: 40px;
-
-		@include breakpoint(medium) {
-			width: 55px;
-		}
+  @include breakpoint(medium) {
+		padding: 50px 0;
 	}
 
 	&__title {
 		color: $white;
 		font-size: 1.5rem;
-		font-weight: 500;
-		margin-top: 15px;
+		font-weight: 800;
 
-		&:after {
-			@include separator;
-		}
-
-		@include breakpoint(medium) {
+    @include breakpoint(medium) {
 			font-size: 2.5rem;
-			margin-top: 20px;
+			margin-bottom: 10px;
 		}
 	}
 
 	&__subtitle {
 		color: $white;
-		font-size: 1.15rem;
-		font-weight: normal;
+		font-size: 1rem;
+		font-weight: 400;
+		opacity: 0.75;
 
-		@include breakpoint(medium) {
-			font-size: 2rem;
+    @include breakpoint(medium) {
+			font-size: 1.45rem;
 		}
 	}
 }
 
-.sales {
-	background-color: $white;
-	border-top: solid 5px $primary-color;
-	padding-top: 25px;
-	text-align: center;
+.main {
+  margin: 20px 0;
 
 	@include breakpoint(medium) {
-		margin-top: -50px;
-		padding-top: 40px;
+    margin: 30px 0;
+  }
+}
+
+.payments {
+  text-align: center;
+
+  &__title {
+    font-size: 1.175rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+.sliders {
+	margin-top: 10px;
+
+	@include breakpoint(medium) {
+		margin-top: 20px;
+	}
+
+	&__shopify {
+
+	}
+
+	&__external {
+		display: none;
 	}
 
 	&__title {
-		font-size: 1.15rem;
-		font-weight: 500;
-
-		@include breakpoint(medium) {
-			font-size: 1.5rem;
-		}
+		text-align: center;
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 0;
+		margin: 0;
 	}
 
-	&__sup {
-		display: inline-block;
-		font-size: 0.725rem;
-		font-weight: bold;
-		margin-top: 19px;
-		vertical-align: top;
+	&__value {
+		font-size: 1.75rem;
+		font-weight: 600;
+		font-family: Helvetica, sans-serif;
+		text-align: center;
+		position: relative;
 
 		@include breakpoint(medium) {
-			margin-top: 24px;
-		}
-	}
+      font-size: 2rem;
+    }
 
-	&__number {
-		font-size: 2em;
-		font-weight: bold;
-
-		@include breakpoint(medium) {
-			font-size: 2.5em;
+		sup {
+			@include sup(1rem, 28px);
 		}
 	}
 
 	&__help {
+		color: $dark-gray;
 		font-size: .8rem;
-	  color: $dark-gray;
+		text-align: center;
 	}
 }
 
-.plans {
+#sliders-external {
+	display: none;
+}
+
+.pay-plan {
 	margin-top: 30px;
 	text-align: center;
 
-	td, th {
-		@include border;
-		z-index: 1;
+	&__title {
+    font-size: 1.175rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1.375rem;
+    }
+  }
+}
+
+.plans {
+	margin-top: 10px;
+	text-align: center;
+
+	&__info {
+		margin-top: 25px;
+		font-size: .8rem;
+		color: $dark-gray;
+	}
+}
+
+.plan {
+	border: solid 1px $light-gray;
+	margin-bottom: 15px;
+	position: relative;
+
+	@include breakpoint(medium) {
+		margin-bottom: 30px;
+	}
+
+	@include breakpoint(large) {
+		margin-bottom: 0px;
+	}
+
+	&--best {
+		border: solid 1px $primary-color;
 	}
 
 	&__header {
-		padding: 20px;
-		width: 60%;
+		background-color: #f8f8f8;
+		border-bottom: solid 1px $light-gray;
+		padding: 15px;
 
-		@include breakpoint(medium) {
-			width: 20%;
+		&--best {
+			background-color: $primary-color;
+			border: solid 1px $primary-color;
+			color: $white;
 		}
+	}
 
-		&--empty {
-			width: 40%;
+	&__content {
+		padding: 25px 15px 5px;
+		position: relative;
 
-			@include breakpoint(medium) {
-				width: 25%;
-			}
+		p {
+			font-size: .9rem;
+			color: $dark-gray;
 		}
 	}
 
 	&__title {
-		font-size: 1.125rem;
-		font-weight: 500;
-		text-align: center;
-		position: relative;
+		font-size: 1rem;
+		font-weight: 600;
+		padding: 0;
+		margin: 0;
 	}
 
 	&__subtitle {
-		color: $dark-gray;
-		font-size: .875rem;
-		font-weight: normal;
-		line-height: 1.2rem;
-		margin: 0;
-		text-align: center;
-	}
-
-	&__best {
-		color: $white;
-		background-color: $primary-color;
-		display: block;
-		position: absolute;
-		top: -37px;
-		width: 100%;
-		padding: 5px 0;
+		font-size: .8rem;
+		font-weight: 600;
 		text-transform: uppercase;
-		font-size: 0.8125em;
-		font-weight: bold;
-		line-height: 1.38;
-		letter-spacing: 0.2em;
+		padding: 0;
+		margin: 0 0 5px;
 	}
 
-	&__affiliate-button {
-		display: none;
-	}
-
-	&__button {
-		margin: 10px 0;
-	}
-
-	&__feature-title {
-		background-color: #f8f8f8;
-		font-size: 0.8125em;
-		font-weight: bold;
-		line-height: 1.38;
-		letter-spacing: 0.2em;
-		padding: 10px 15px;
-		text-transform: uppercase;
-		text-align: left;
-	}
-
-	&__feature-text {
-		color: $dark-gray;
-		font-family: Helvetica, "Brandon Text";
-		font-size: .875rem;
-
-		td {
-			padding: 15px;
-		}
-	}
-
-	&__paid {
-		vertical-align: top;
-	}
-
-	&__pay-sup {
-		display: inline-block;
-		vertical-align: top;
-		margin-top: 24px;
-		font-family: "Brandon Text", Helvetica;
-		font-size: 0.725rem;
-		font-weight: bold;
-		color: $secondary-color;
-	}
-
-	&__pay-number {
-		font-family: "Brandon Text", Helvetica;
+	&__pay {
 		font-size: 2rem;
-		font-weight: bold;
-		color: $secondary-color;
+		font-weight: 600;
+		font-family: Helvetica, sans-serif;
+		margin-bottom: 5px;
 
-		@include breakpoint(medium) {
-			font-size: 2.5rem;
+		sup {
+			@include sup(1rem, 28px);
 		}
 	}
 
-	&__sup {
-		color: $secondary-color;
-		display: inline-block;
-		font-family: "Brandon Text", Helvetica;
-		font-size: 0.725rem;
-		font-weight: bold;
-		margin-top: 18px;
-		vertical-align: top;
+	&__separator {
+		@include separator;
+		border: none;
 	}
 
-	&__number {
-		color: $secondary-color;
-		font-family: "Brandon Text", Helvetica;
-		font-size: 1.75rem;
-		font-weight: bold;
+	&__cost {
+		font-size: 1.25rem;
+		font-weight: 600;
+		font-family: Helvetica, sans-serif;
+		margin-bottom: 15px;
 
+		sup {
+			@include sup(0.7rem, 18px);
+		}
 	}
 
-	&__tick {
-		background-image: url(../images/tick.svg);
-		background-size: 18px 18px;
-		background-repeat: no-repeat;
-		background-position: center;
+	&__ribbon {
+		background: url(../images/best-choice.svg) no-repeat center;
+		background-size: 75px 75px;
+		height: 75px;
+		width: 75px;
+		position: absolute;
+		top: -15px;
+		right: 15px;
+		display: none;
 	}
 }
 
 .ads {
-	&:before {
-		@include separator;
+	margin-top: 0;
+
+	@include breakpoint(large) {
+		margin-top: 40px;
 	}
 
 	&__banner {
-		margin: 20px auto 20px;
+		margin: 0 auto 20px;
 		width: 300px;
 		height: 250px;
 
-		@include breakpoint(large) {
+		@include breakpoint(medium) {
 			width: 728px;
 			height: 90px;
 		}
@@ -357,41 +339,76 @@
 
 	&__contact {
 		color: $dark-gray;
-		font-size: .85rem;
+		font-size: 1rem;
 		text-align: center;
 		margin-bottom: 5px;
-
-		@include breakpoint(large) {
-			font-size: 1rem;
-		}
 	}
 }
 
 .footer {
+	text-align: center;
+	margin-bottom: 50px;
+
 	&:before {
 		@include separator;
 	}
 
 	&__by {
-		text-align: center;
 		color: $dark-gray;
 		font-size: .85rem;
-		padding: 5px 0 30px;
+		padding: 5px 0 0;
+	}
+
+	&__partner {
+		margin: 10px auto 5px;
+		width: 150px;
+	}
+}
+
+.share {
+	text-align: center;
+
+	&__title {
+    font-size: 1.175rem;
+    font-weight: 500;
+    margin: 20px 0;
+
+    @include breakpoint(medium) {
+      font-size: 1.25rem;
+    }
+
+    @include breakpoint(large) {
+      font-size: 1.375rem;
+    }
+  }
+
+	li img{
+		width: 32px;
+		height: 32px;
+	}
+}
+
+.leads {
+	background-color: #f1f1f1;
+	height: 300px;
+	margin: 30px 0;
+	padding: 50px 0;
+	text-align: center;
+
+	&__title {
+		font-size: 1.5rem;
+		font-weight: 500;
+
+		&:after {
+			@include separator;
+		}
 	}
 }
 
 // ---------------
-// OVERRIDE FUNDATION
+// FOUNDATIONS OVERRIDE
 // ---------------
 .slider {
-	margin-bottom: 1.5rem;
-}
-
-.button-group {
-	margin-top: 15px;
-}
-
-.button.hollow {
-    border: 1px solid $light-gray;
-    color: $secondary-color;
+	margin-top: 10px;
+	margin-bottom: 30px;
 }
