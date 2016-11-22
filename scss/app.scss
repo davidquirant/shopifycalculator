@@ -296,11 +296,6 @@
 		}
 	}
 
-	&__separator {
-		@include separator;
-		border: none;
-	}
-
 	&__cost {
 		font-size: 1.25rem;
 		font-weight: 600;

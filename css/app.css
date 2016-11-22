@@ -2323,17 +2323,6 @@ select {
       font-weight: bold;
       margin-top: 28px;
       vertical-align: top; }
-  .plan__separator {
-    background-color: #1BAF5D;
-    content: '';
-    display: block;
-    height: 3px;
-    margin: 10px auto;
-    width: 30px;
-    border: none; }
-    @media screen and (min-width: 40em) {
-      .plan__separator {
-        margin: 15px auto; } }
   .plan__cost {
     font-size: 1.25rem;
     font-weight: 600;
