@@ -232,7 +232,7 @@
 }
 
 .plan {
-	border: solid 1px $light-gray;
+	border: solid 1px #BCE8D9;
 	margin-bottom: 15px;
 	position: relative;
 
@@ -249,8 +249,8 @@
 	}
 
 	&__header {
-		background-color: #f8f8f8;
-		border-bottom: solid 1px $light-gray;
+		background-color: #f0faf6;
+		border-bottom: solid 1px #bce8d9;
 		padding: 15px;
 
 		&--best {

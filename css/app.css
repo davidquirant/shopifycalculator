@@ -2276,7 +2276,7 @@ select {
         margin-bottom: 0; } }
 
 .plan {
-  border: solid 1px #e6e6e6;
+  border: solid 1px #BCE8D9;
   margin-bottom: 15px;
   position: relative; }
   @media screen and (min-width: 40em) {
@@ -2288,8 +2288,8 @@ select {
   .plan--best {
     border: solid 1px #1BAF5D; }
   .plan__header {
-    background-color: #f8f8f8;
-    border-bottom: solid 1px #e6e6e6;
+    background-color: #f0faf6;
+    border-bottom: solid 1px #bce8d9;
     padding: 15px; }
     .plan__header--best {
       background-color: #1BAF5D;
