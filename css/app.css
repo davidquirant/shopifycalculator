@@ -2267,9 +2267,13 @@ select {
   margin-top: 10px;
   text-align: center; }
   .plans__info {
-    margin-top: 25px;
+    margin-bottom: 25px;
     font-size: .8rem;
     color: #8a8a8a; }
+    @media screen and (min-width: 64em) {
+      .plans__info {
+        margin-top: 25px;
+        margin-bottom: 0; } }
 
 .plan {
   border: solid 1px #e6e6e6;

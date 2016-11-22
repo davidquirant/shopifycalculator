@@ -220,9 +220,14 @@
 	text-align: center;
 
 	&__info {
-		margin-top: 25px;
+		margin-bottom: 25px;
 		font-size: .8rem;
 		color: $dark-gray;
+
+		@include breakpoint(large) {
+			margin-top: 25px;
+			margin-bottom: 0;
+		}
 	}
 }
 
