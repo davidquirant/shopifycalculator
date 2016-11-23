@@ -32,12 +32,12 @@ function calculatePlans() {
   var basic = 29;
   var shopify = 79;
   var advanced = 299;
-  var plus = 2000;
+  // var plus = 2000;
   var discount = 0;
   var payBasic = 0;
   var payShopify = 0;
   var payAdvanced = 0;
-  var payPlus = 0;
+  // var payPlus = 0;
   var payment;
 
   if ($('#retail').prop('checked')) {
@@ -65,51 +65,54 @@ function calculatePlans() {
     payBasic = ((((average * 0.029) + 0.3) * online) + ((average * 0.027) * person) + ((basic + retail) - ((basic + retail) * discount))) * period;
     payShopify = ((((average * 0.026) + 0.3) * online) + ((average * 0.025) * person) + ((shopify + retail) - ((shopify + retail) * discount))) * period;
     payAdvanced = ((((average * 0.024) + 0.3) * online) + ((average * 0.024) * person) + ((advanced + retail) - ((advanced + retail) * discount))) * period;
-    payPlus = (plus - (plus * discount)) * period;
+    // payPlus = (plus - (plus * discount)) * period;
   } else {
     payBasic = (((basic + retail) - ((basic + retail) * discount)) + (sales * 0.02)) * period;
     payShopify = (((shopify + retail) - ((shopify + retail) * discount)) + (sales * 0.01)) * period;
     payAdvanced = (((advanced + retail) - ((advanced + retail) * discount)) + (sales * 0.005)) * period;
-    payPlus = (plus - (plus * discount)) * period;
+    // payPlus = (plus - (plus * discount)) * period;
   }
 
   $('.plan__pay-basic').html(toCurrency(payBasic.toFixed(0)));
   $('.plan__pay-shopify').html(toCurrency(payShopify.toFixed(0)));
   $('.plan__pay-advanced').html(toCurrency(payAdvanced.toFixed(0)));
-  $('.plan__pay-plus').html(toCurrency(payPlus.toFixed(0)));
+  // $('.plan__pay-plus').html(toCurrency(payPlus.toFixed(0)));
 
   if (online > 0 || person > 0 || sales > 0) {
-    if ((payBasic < payShopify) && (payBasic < payAdvanced) && (payBasic < payPlus)) {
+    // if ((payBasic < payShopify) && (payBasic < payAdvanced) && (payBasic < payPlus)) {
+    if ((payBasic < payShopify) && (payBasic < payAdvanced)) {
       $('#plan-basic').find('.plan__ribbon').show();
       $('#plan-shopify').find('.plan__ribbon').hide();
       $('#plan-advanced').find('.plan__ribbon').hide();
-      $('#plan-plus').find('.plan__ribbon').hide();
+      // $('#plan-plus').find('.plan__ribbon').hide();
 
       $('#plan-basic').addClass('plan--best').find('.plan__header').addClass('plan__header--best');
       $('#plan-shopify').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
       $('#plan-advanced').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
-      $('#plan-plus').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
+      // $('#plan-plus').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
 
       $('#plan-basic').find('.button').removeClass('disabled');
       $('#plan-shopify').find('.button').addClass('disabled');
       $('#plan-advanced').find('.button').addClass('disabled');
-      $('#plan-plus').find('.button').addClass('disabled');
-    } else if ((payShopify < payBasic) && (payShopify < payAdvanced) && (payShopify < payPlus)) {
+      // $('#plan-plus').find('.button').addClass('disabled');
+    // } else if ((payShopify < payBasic) && (payShopify < payAdvanced) && (payShopify < payPlus)) {
+    } else if ((payShopify < payBasic) && (payShopify < payAdvanced)) {
       $('#plan-basic').find('.plan__ribbon').hide();
       $('#plan-shopify').find('.plan__ribbon').show();
       $('#plan-advanced').find('.plan__ribbon').hide();
-      $('#plan-plus').find('.plan__ribbon').hide();
+      // $('#plan-plus').find('.plan__ribbon').hide();
 
       $('#plan-basic').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
       $('#plan-shopify').addClass('plan--best').find('.plan__header').addClass('plan__header--best');
       $('#plan-advanced').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
-      $('#plan-plus').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
+      // $('#plan-plus').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
 
       $('#plan-basic').find('.button').addClass('disabled');
       $('#plan-shopify').find('.button').removeClass('disabled');
       $('#plan-advanced').find('.button').addClass('disabled');
       $('#plan-plus').find('.button').addClass('disabled');
-    } else if ((payAdvanced < payBasic) && (payAdvanced < payShopify) && (payAdvanced < payPlus)) {
+    // } else if ((payAdvanced < payBasic) && (payAdvanced < payShopify) && (payAdvanced < payPlus)) {
+    } else if ((payAdvanced < payBasic) && (payAdvanced < payShopify)) {
       $('#plan-basic').find('.plan__ribbon').hide();
       $('#plan-shopify').find('.plan__ribbon').hide();
       $('#plan-advanced').find('.plan__ribbon').show();
@@ -123,22 +126,22 @@ function calculatePlans() {
       $('#plan-basic').find('.button').addClass('disabled');
       $('#plan-shopify').find('.button').addClass('disabled');
       $('#plan-advanced').find('.button').removeClass('disabled');
-      $('#plan-plus').find('.button').addClass('disabled');
+      // $('#plan-plus').find('.button').addClass('disabled');
     } else {
       $('#plan-basic').find('.plan__ribbon').hide();
       $('#plan-shopify').find('.plan__ribbon').hide();
       $('#plan-advanced').find('.plan__ribbon').hide();
-      $('#plan-plus').find('.plan__ribbon').show();
+      // $('#plan-plus').find('.plan__ribbon').show();
 
       $('#plan-basic').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
       $('#plan-shopify').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
       $('#plan-advanced').removeClass('plan--best').find('.plan__header').removeClass('plan__header--best');
-      $('#plan-plus').addClass('plan--best').find('.plan__header').addClass('plan__header--best');
+      // $('#plan-plus').addClass('plan--best').find('.plan__header').addClass('plan__header--best');
 
       $('#plan-basic').find('.button').addClass('disabled');
       $('#plan-shopify').find('.button').addClass('disabled');
       $('#plan-advanced').find('.button').addClass('disabled');
-      $('#plan-plus').find('.button').removeClass('disabled');
+      // $('#plan-plus').find('.button').removeClass('disabled');
     }
   }
 }

@@ -15,7 +15,7 @@
 
 @include foundation-global-styles;
 @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -53,7 +53,7 @@
 // @include foundation-top-bar;
 @include foundation-visibility-classes;
 // @include foundation-float-classes;
-// @include foundation-flex-classes;
+@include foundation-flex-classes;
 
 // @include motion-ui-transitions;
 // @include motion-ui-animations;
@@ -331,7 +331,7 @@
 		width: 300px;
 		height: 250px;
 
-		@include breakpoint(medium) {
+		@include breakpoint(large) {
 			width: 728px;
 			height: 90px;
 		}
