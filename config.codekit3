@@ -7,7 +7,7 @@
 		"uuidString": "6D6A2C75-D175-4995-9047-153F708A5EF1"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25479",
 "files": {
 	"\/.bowerrc": {
 		"ft": 8192,
@@ -3488,14 +3488,6 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
-	"\/images\/card.png": {
-		"ft": 32768,
-		"iS": 30957,
-		"oA": 0,
-		"oAP": "\/images\/card.png",
-		"oF": 0,
-		"opt": 1
-		},
 	"\/images\/facebook.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3533,6 +3525,22 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/images\/quaderno-banner-300x250.png": {
+		"ft": 32768,
+		"iS": 20311,
+		"oA": 0,
+		"oAP": "\/images\/quaderno-banner-300x250.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/images\/quaderno-banner-728x90.png": {
+		"ft": 32768,
+		"iS": 21666,
+		"oA": 0,
+		"oAP": "\/images\/quaderno-banner-728x90.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/images\/shopify-banner-300x250-dark.jpg": {
 		"ft": 16384,
@@ -3585,6 +3593,14 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/images\/thumb.png": {
+		"ft": 32768,
+		"iS": 30957,
+		"oA": 0,
+		"oAP": "\/images\/thumb.png",
+		"oF": 0,
+		"opt": 1
 		},
 	"\/images\/twitter.svg": {
 		"ft": 2097152,
@@ -4141,6 +4157,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -4304,6 +4324,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
 			},
 		"multiline-ternary": {
 			"active": 0,
@@ -4669,6 +4693,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -4900,6 +4928,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -5733,6 +5765,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {
