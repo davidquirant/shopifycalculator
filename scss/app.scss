@@ -389,8 +389,12 @@
 }
 
 .leads {
-	margin: 50px 0;
+	margin: 35px 0 25px;
 	text-align: center;
+
+	@include breakpoint(large) {
+		margin: 50px 0;
+	}
 
 	&__title {
 		font-size: 1.5rem;

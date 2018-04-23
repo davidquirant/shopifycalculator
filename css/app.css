@@ -2965,8 +2965,11 @@ select {
     height: 32px; }
 
 .leads {
-  margin: 50px 0;
+  margin: 35px 0 25px;
   text-align: center; }
+  @media screen and (min-width: 64em) {
+    .leads {
+      margin: 50px 0; } }
   .leads__title {
     font-size: 1.5rem;
     font-weight: 600; }
