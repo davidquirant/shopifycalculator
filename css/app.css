@@ -2149,7 +2149,7 @@ textarea[readonly] {
   -webkit-appearance: none;
   -moz-appearance: none; }
 
-input[type='search'] {
+input[type="search"] {
   box-sizing: border-box; }
 
 [type='file'],
@@ -2965,14 +2965,11 @@ select {
     height: 32px; }
 
 .leads {
-  background-color: #f1f1f1;
-  height: 300px;
-  margin: 30px 0;
-  padding: 50px 0;
+  margin: 50px 0;
   text-align: center; }
   .leads__title {
     font-size: 1.5rem;
-    font-weight: 500; }
+    font-weight: 600; }
     .leads__title:after {
       background-color: #1BAF5D;
       content: '';

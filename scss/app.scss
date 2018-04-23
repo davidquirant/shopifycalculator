@@ -389,15 +389,12 @@
 }
 
 .leads {
-	background-color: #f1f1f1;
-	height: 300px;
-	margin: 30px 0;
-	padding: 50px 0;
+	margin: 50px 0;
 	text-align: center;
 
 	&__title {
 		font-size: 1.5rem;
-		font-weight: 500;
+		font-weight: 600;
 
 		&:after {
 			@include separator;
