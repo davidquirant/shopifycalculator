@@ -2969,7 +2969,7 @@ select {
   text-align: center; }
   .leads__title {
     font-size: 1.5rem;
-    font-weight: 800; }
+    font-weight: 600; }
     .leads__title:after {
       background-color: #1BAF5D;
       content: '';
