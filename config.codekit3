@@ -16,6 +16,13 @@
 		"oAP": "\/.bowerrc",
 		"oF": 0
 		},
+	"\/_config.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 1,
+		"oAP": "\/_config.yml",
+		"oF": 0
+		},
 	"\/bower.json": {
 		"ft": 524288,
 		"oA": 1,
